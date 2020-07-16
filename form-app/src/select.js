@@ -9,15 +9,12 @@ class Select extends React.Component{
     }
 
     mudarSelect(event){
-        alert(event.target)
-        this.setState((event) => ({
-            value: event.target.value
-        }));
+        alert(event.target);
+        this.setState({value: event.target.value});
     }
 
     enviar(event){
-
-        alert(event.target);
+        alert(this.state.value);
         event.preventDefault();
     }
 
