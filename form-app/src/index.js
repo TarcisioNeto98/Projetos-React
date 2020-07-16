@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Select from './select'
+import Select from './select';
+import Textarea from './textarea';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Select />
+    <Textarea />
   </React.StrictMode>,
   document.getElementById('root')
 );
