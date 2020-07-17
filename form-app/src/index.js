@@ -5,10 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Select from './select';
 import Textarea from './textarea';
+import Multiplos from './multiplosinputs'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Textarea />
+    <Multiplos />
   </React.StrictMode>,
   document.getElementById('root')
 );
