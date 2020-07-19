@@ -29,11 +29,11 @@ class MostrarEntradas extends React.Component{
 }
 
 function paraCelcius(valor){
-  return (parseFloat(valor) - 32) * (5/9);
+  return (valor - 32) * (5/9);
 }
 
 function paraFahrenheit(valor){
-  return (parseFloat(valor) * 9/5) + 32;
+  return (valor * 9/5) + 32;
 }
 
 class Calculadora extends React.Component {
@@ -54,7 +54,7 @@ class Calculadora extends React.Component {
   }
 
   render(){//Quando o state varia, o elemento que o utiliza é renderizado novamente.
-    var tempConvertida = (this.state.escala === 'c') ? paraFahrenheit(this.state.temp) : paraCelcius(this.state.temp);
+    var tempConvertida = (this.state.escala === 'c') ? paraFahrenheit(parseFloat(this.state.temp)) : paraCelcius(parseFloat(this.state.temp));
     
     return(
       <form>
