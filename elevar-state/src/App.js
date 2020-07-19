@@ -41,15 +41,10 @@ class Calculadora extends React.Component {
   constructor(props){
     super(props);
     this.state = {temp: '', escala:'c'};
-    this.alterarTempCelcius = this.alterarTempCelcius.bind(this);
-    this.alterarTempFahrenheit = this.alterarTempFahrenheit.bind(this);
+    this.alterarTemp = this.alterarTemp.bind(this);
   }
 
-  alterarTempCelcius(temperatura, scale){
-    this.setState({temp: temperatura, escala: scale});
-  }
-
-  alterarTempFahrenheit(temperatura, scale){
+  alterarTemp(temperatura, scale){
     this.setState({temp: temperatura, escala: scale});
   }
 
@@ -59,9 +54,9 @@ class Calculadora extends React.Component {
     return(
       <form>
         <MostrarEntradas temperatura = {this.state.escala === 'f' ? tempConvertida : this.state.temp} 
-        mudarTemperatura={this.alterarTempCelcius} scale={'c'}/>
+        mudarTemperatura={this.alterarTemp} scale={'c'}/>
         <MostrarEntradas temperatura = {this.state.escala === 'c' ? tempConvertida : this.state.temp} 
-        mudarTemperatura={this.alterarTempFahrenheit} scale={'f'}/>
+        mudarTemperatura={this.alterarTemp} scale={'f'}/>
       </form>
     );
   }
